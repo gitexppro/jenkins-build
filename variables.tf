@@ -13,13 +13,13 @@ variable "az1" {
   default = "us-east-1a"
 }
 
-# variable "public_subnet2_cidr" {}
+variable "public_subnet2_cidr" {}
 
 variable "az2" {
   default = "us-east-1b"
 }
 
-# variable "public_subnet2_name" {}
+variable "public_subnet2_name" {}
 
 variable "IGW_name" {}
 
