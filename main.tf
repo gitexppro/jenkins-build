@@ -20,6 +20,7 @@ resource "aws_vpc" "main" {                       #aws vpc creation
   tags = {
     Name = "${var.vpc_name}"
     Env = "Prod"
+    Owner = "Mady"
   }
 }
 
