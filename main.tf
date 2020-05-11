@@ -73,7 +73,7 @@ resource "aws_route_table_association" "public" {
 data "aws_ami" "my_ami" {
      most_recent      = true
      #name_regex       = "^mavrick"
-     owners           = ["721834156908"]
+     owners           = ["907017689216"]
 }
 
 resource "aws_instance" "web-1" {
