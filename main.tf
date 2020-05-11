@@ -70,9 +70,14 @@ resource "aws_route_table_association" "public" {
 
 }
 
+data "aws_ami" "my_ami" {
+  most recent = true
+  owners = ["907017689216"]
+  }
+
 resource "aws_instance" "web-1" {
-    # ami = "${data.aws_ami.my_ami.id}"
-    ami = "ami-0915e09cc7ceee3ab"
+     ami = "${data.aws_ami.my_ami.id}"
+#     ami = "ami-0915e09cc7ceee3ab"
     availability_zone = "us-east-1a"
     instance_type = "t2.micro"
     key_name = "Mkeypair"
