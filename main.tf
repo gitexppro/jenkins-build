@@ -33,15 +33,15 @@ resource "aws_subnet" "subnet1-public" {          #creating subnet1-public in vp
   }
 }
 
-# resource "aws_subnet" "subnet2-public" {
-#   vpc_id = "${aws_vpc.main.id}"
-#   cidr_block = "${var.public_subnet2_cidr}"
-#   availability_zone = "${var.az2}"  
+resource "aws_subnet" "subnet2-public" {
+  vpc_id = "${aws_vpc.main.id}"
+  cidr_block = "${var.public_subnet2_cidr}"
+  availability_zone = "${var.az2}"  
 
-#   tags = {
-#     Name = "${var.public_subnet2_name}"
-#   }
-# }
+  tags = {
+    Name = "${var.public_subnet2_name}"
+  }
+}
 
 resource "aws_internet_gateway" "IGW" {
   vpc_id = "${aws_vpc.main.id}"
